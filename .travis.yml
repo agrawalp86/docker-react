@@ -6,6 +6,4 @@ before_install:
   - docker build -t agrawalp86/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true agrawalp86/docker-react npm run test
-
-language: generic 
+  - docker run -e CI=true agrawalp86/docker-react npm run test -- --coverage
